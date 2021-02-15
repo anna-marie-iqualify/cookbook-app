@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'header',
   template: `
     <div class="header">
-      <button>hamburger</button>
+      <side-menu></side-menu>
       <button>AvatarButton</button>
     </div>
   `,

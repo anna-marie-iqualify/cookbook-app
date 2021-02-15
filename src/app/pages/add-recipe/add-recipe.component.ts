@@ -56,6 +56,7 @@ import { Component } from '@angular/core';
   `,
   styleUrls: ['./add-recipe.component.less']
 })
+
 export class AddRecipeComponent {
   recipeName = '';
   ingredients = [
