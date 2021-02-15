@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common'; 
 
 @Component({
   selector: 'add-recipe',
@@ -50,7 +51,7 @@ import { Component } from '@angular/core';
       <input id="page-number" class="stretch" type="text" placeholder="Page number">
     </div>
     <div class="row-right">
-      <button>Cancel</button>
+      <button (click)="goBack()">Cancel</button>
       <button>Save</button>
     </div>
   `,
@@ -67,4 +68,11 @@ export class AddRecipeComponent {
   bookName = '';
   pageNumber = '';
 
+  constructor(
+    private location: Location,
+  ){}
+
+  goBack() {
+    this.location.back();
+  }
 }
