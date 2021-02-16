@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
   selector: 'side-menu',
   template: `
     <div>
-      <button (click)="toggleNav()">hamburger</button>
+      <button (click)="toggleNav()">
+        <div class="hamburger"></div>
+        <div  class="hamburger"></div>
+        <div  class="hamburger"></div>
+      </button>
       <nav [ngClass]="{ 'hide': !showNav, 'show': showNav }">
         <div class="close">
           <button (click)="toggleNav()" >X</button>
