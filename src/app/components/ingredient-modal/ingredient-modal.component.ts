@@ -10,6 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
       <div [ngClass]="{ 'hide': !isOpen, 'show': isOpen }">
         <label id="ingredientName" class="grid">
           <span>Ingredient</span>
+          <ui-dropdown></ui-dropdown>
           <input for="ingredientName" placeholder="Select ingredient" formControlName="name">
         </label>
         <div class="row">

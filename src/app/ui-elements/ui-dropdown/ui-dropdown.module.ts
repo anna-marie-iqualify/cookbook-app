@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { LibraryViewerComponent } from './library-viewer.component';
+import { UiDropdownComponent } from './ui-dropdown.component';
 
 @NgModule({
   declarations: [
-    LibraryViewerComponent
+    UiDropdownComponent
   ],
   imports: [
     BrowserModule,
   ],
   providers: [],
   bootstrap: [
-    LibraryViewerComponent
+    UiDropdownComponent
   ],
   exports: [
-    LibraryViewerComponent
+    UiDropdownComponent
   ]
 })
-export class LibraryViewerModule { }
+
+export class UiDropdownModule { }
