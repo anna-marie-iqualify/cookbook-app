@@ -31,6 +31,5 @@ export class SideMenuComponent {
 
   toggleNav() {
     this.showNav = !this.showNav;
-    console.log(this.showNav)
   }
 }
