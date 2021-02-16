@@ -19,6 +19,7 @@ import { Component } from '@angular/core';
           <a [routerLink]="['/recipes']" (click)="toggleNav()">Recipes</a>
           <div>Pantry</div>
           <div>Shopping list</div>
+          <a [routerLink]="['/library']" (click)="toggleNav()">ui elements</a>
         </div>
       </nav>
     </div>
