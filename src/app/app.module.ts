@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AddRecipeModule } from './pages/add-recipe/add-recipe.module'
+import { LibraryModule } from './ui-elements/library/library.module';
 import { HeaderModule } from './components/header/header.module'
 
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     AddRecipeModule,
+    LibraryModule,
     HeaderModule,
   ],
   providers: [],

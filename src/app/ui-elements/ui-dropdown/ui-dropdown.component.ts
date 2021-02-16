@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ui-dropdown',
@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
   `,
   styleUrls: ['./ui-dropdown.component.less']
 })
-export class UiDropdownComponent {
+export class UiDropdownComponent implements OnInit {
+  constructor () {}
+  ngOnInit () {}
 }

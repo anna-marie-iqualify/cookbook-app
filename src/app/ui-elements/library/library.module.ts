@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { LibraryComponent } from './library.component';
-
+import { UiDropdownModule } from '../ui-dropdown/ui-dropdown.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +10,7 @@ import { LibraryComponent } from './library.component';
   ],
   imports: [
     BrowserModule,
+    UiDropdownModule,
   ],
   providers: [],
   bootstrap: [
@@ -17,6 +18,7 @@ import { LibraryComponent } from './library.component';
   ],
   exports: [
     LibraryComponent
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class LibraryModule { }
