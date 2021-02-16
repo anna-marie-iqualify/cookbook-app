@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
     </div>
     <div class="row">
       <span>Ingredients</span>
-      <button>Plus</button>
+      <ingredient-modal></ingredient-modal>
     </div>
     <div class="row">
       <div></div>
@@ -20,27 +20,27 @@ import { Location } from '@angular/common';
     <div class="row">
       <span>Ingredient name</span>
       <span>1 tbsp</span>
-      <div>
-        <button>Edit</button>
-        <button>Delete</button>
+      <div class="row">
+        <ingredient-modal [buttonLabel]="'Edit'"></ingredient-modal>
+        <button disabled>Delete</button>
       </div>
     </div>
     <div class="row">
       <span>Instructions (optional)</span>
-      <button>Plus</button>
+      <instruction-modal></instruction-modal>
     </div>
     <div class="row">
       <span>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut..
       </span>
       <div class="row">
-        <button>Edit</button>
-        <button>Delete</button>
+        <instruction-modal [buttonLabel]="'Edit'"></instruction-modal>
+        <button disabled>Delete</button>
       </div>
     </div>
     <div class="row">
       <span>Cover Image (optional)</span>
-      <button>Plus</button>
+      <button disabled>Plus</button>
     </div>
     <div class="row">
       <label for="book-name" class="sr-only">Book name</label>
@@ -52,7 +52,7 @@ import { Location } from '@angular/common';
     </div>
     <div class="row-right">
       <button (click)="goBack()">Cancel</button>
-      <button>Save</button>
+      <button (click)="goBack()">Save</button>
     </div>
   `,
   styleUrls: ['./add-recipe.component.less']
