@@ -11,11 +11,10 @@ import { Component } from '@angular/core';
         </div>
         
         <div class="menu">
-          <div (click)="toggleNav()">Planners</div>
+          <div>Planners</div>
           <a [routerLink]="['/recipes']" (click)="toggleNav()">Recipes</a>
-          <div (click)="toggleNav()">Pantry</div>
-          <div (click)="toggleNav()">Shopping list</div>
-          <a [routerLink]="['/recipe/new']" (click)="toggleNav()">Create recipe</a>
+          <div>Pantry</div>
+          <div>Shopping list</div>
         </div>
       </nav>
     </div>

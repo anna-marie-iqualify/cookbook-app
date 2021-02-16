@@ -11,9 +11,13 @@ import { Component, Input } from '@angular/core';
           <span>Instruction</span>
           <textarea for="instructionName" placeholder="Instruction..." rows="5"></textarea>
         </label>
+        <div class="row">
+          <span>Image (optional)</span>
+          <button disabled>Upload</button>
+        </div>
         <div class="row-right">
           <button (click)="close()">Cancel</button>
-          <button (click)="close()">Save</button>
+          <button (click)="close()">{{ confirmLabel }}</button>
         </div>
       </div>
 
@@ -23,6 +27,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InstructionModalComponent {
   @Input() buttonLabel = '+';
+  @Input() confirmLabel = 'Add';
   
   isOpen = false;
   

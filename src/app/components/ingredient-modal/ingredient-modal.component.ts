@@ -23,7 +23,7 @@ import { Component, Input } from '@angular/core';
         </div>
         <div class="row-right">
           <button (click)="close()">Cancel</button>
-          <button (click)="close()">Save</button>
+          <button (click)="close()">{{ confirmLabel }}</button>
         </div>
       </div>
 
@@ -33,6 +33,7 @@ import { Component, Input } from '@angular/core';
 })
 export class IngredientModalComponent {
   @Input() buttonLabel = '+';
+  @Input() confirmLabel = 'Add';
   
   isOpen = false;
   

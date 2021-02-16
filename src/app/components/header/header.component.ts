@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="header">
       <side-menu></side-menu>
-      <button>AvatarButton</button>
+      <button disabled>AvatarButton</button>
     </div>
   `,
   styleUrls: ['./header.component.less']

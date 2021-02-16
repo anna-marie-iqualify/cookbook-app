@@ -21,7 +21,10 @@ import { Location } from '@angular/common';
       <span>Ingredient name</span>
       <span>1 tbsp</span>
       <div class="row">
-        <ingredient-modal [buttonLabel]="'Edit'"></ingredient-modal>
+        <ingredient-modal 
+          [buttonLabel]="'Edit'"
+          [confirmLabel]="'Update'"
+        ></ingredient-modal>
         <button disabled>Delete</button>
       </div>
     </div>
@@ -34,7 +37,10 @@ import { Location } from '@angular/common';
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut..
       </span>
       <div class="row">
-        <instruction-modal [buttonLabel]="'Edit'"></instruction-modal>
+        <instruction-modal 
+          [buttonLabel]="'Edit'"
+          [confirmLabel]="'Update'"
+        ></instruction-modal>
         <button disabled>Delete</button>
       </div>
     </div>
@@ -43,12 +49,12 @@ import { Location } from '@angular/common';
       <button disabled>Plus</button>
     </div>
     <div class="row">
-      <label for="book-name" class="sr-only">Book name</label>
-      <input id="book-name" class="stretch" type="text" placeholder="Book name">
+      <label for="book-name" class="sr-only">Book name (optional)</label>
+      <input id="book-name" class="stretch" type="text" placeholder="Book name (optional)">
     </div>
     <div class="row">
-      <label for="page-number" class="sr-only">Page number</label>
-      <input id="page-number" class="stretch" type="text" placeholder="Page number">
+      <label for="page-number" class="sr-only">Page number (optional)</label>
+      <input id="page-number" class="stretch" type="text" placeholder="Page number (optional)">
     </div>
     <div class="row-right">
       <button (click)="goBack()">Cancel</button>
