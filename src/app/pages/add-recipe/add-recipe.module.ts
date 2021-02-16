@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AddRecipeComponent } from './add-recipe.component';
@@ -13,6 +13,7 @@ import { InstructionModalModule } from '../../components/instruction-modal/instr
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     IngredientModalModule,
     InstructionModalModule,
   ],
