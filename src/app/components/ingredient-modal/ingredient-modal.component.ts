@@ -8,11 +8,15 @@ import { FormGroup, FormControl } from '@angular/forms';
       <button (click)="toggleModal()">{{ buttonLabel }}</button>
 
       <div [ngClass]="{ 'hide': !isOpen, 'show': isOpen }">
-        <label id="ingredientName" class="grid">
+        <div class="grid">
           <span>Ingredient</span>
-          <ui-dropdown></ui-dropdown>
-          <input for="ingredientName" placeholder="Select ingredient" formControlName="name">
-        </label>
+          <ui-dropdown
+            [label]="'Ingredient'"
+            [placeholder]="'Select ingredient'"
+            [options]="ingredients"
+            (callback)="getIngredient($event)"
+          ></ui-dropdown>
+        </div>
         <div class="row">
           <label id="measurement" class="grid">
             <span>Measurement</span>
@@ -45,6 +49,15 @@ export class IngredientModalComponent {
   
   isOpen = false;
   
+  ingredients = [
+    {_id: 1, name: 'Butter'},
+    {_id: 2, name: 'Onions'},
+    {_id: 3, name: 'Mushrooms'},
+    {_id: 4, name: 'Salt'},
+    {_id: 5, name: 'Water'},
+    {_id: 6, name: 'Bread'},
+  ];
+
   toggleModal() {
     this.isOpen = !this.isOpen;
   }
@@ -52,6 +65,11 @@ export class IngredientModalComponent {
   close() {
     this.isOpen = false;
   }
+
+  getIngredient(option: any) {
+    (this.ingredientForm.controls['name'] as FormControl).setValue(option.name)
+  }
+
   onSubmit() {
     this.callback.emit(this.ingredientForm.value);
     this.isOpen = false;
