@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "user01",
+    "name": "Jane Do",
+    "email": "user01@example.com",
+    "password": "$2b$12$GEK7.uAWeSQNsgvhfWmYpuAcTHypwo7KMfAfuzeZFetmFIgQIqNAy",
+    "pantries": [],
+    "recipes": [
+      "recipe01",
+      "recipe02",
+      "recipe03",
+      "recipe04"
+    ],
+    "amendments": {
+      "recipe02": {}
+    },
+    "books": [],
+    "planners": [],
+    "groceryLists": []
+  },
+  {
+    "_id": "user02",
+    "name": "John Dude",
+    "email": "user02@example.com",
+    "password": "$2b$12$KHHKZZCkc6Iys6WDhoWTMOJLXXs3aONYd0cgse2YI8b6Eog9KwjGm",
+    "pantries": [],
+    "recipes": [],
+    "books": [],
+    "planners": [],
+    "groceryLists": []
+  }
+]
