@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
+    "develop": "NODE_ENV=production nodemon ./server.js",
     "dev": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration=production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,7 +22,9 @@
     "@angular/platform-browser-dynamic": "~11.1.1",
     "@angular/router": "~11.1.1",
     "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongodb": "^3.6.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -40,6 +43,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "nodemon": "^2.0.7",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
