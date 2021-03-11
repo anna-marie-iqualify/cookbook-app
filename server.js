@@ -3,13 +3,21 @@ const { MongoClient } = require("mongodb")
 require('dotenv').config()
 
 const app = express();
-console.log(process.env.NODE_ENV )
+app.use(express.static(__dirname));
+app.use(express.urlencoded({ extended: true }))
+
 if(process.env.NODE_ENV === 'production') {
-  console.log('production')
   app.use(express.static('./dist/av-cookbook-app'));
 
-  app.get('/*', function(req, res) {
+  app.get('/recipes', function(req, res) {
     res.sendFile('index.html', { root: 'dist/av-cookbook-app/' });
+  });
+
+} else {
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
   });
 }
 
