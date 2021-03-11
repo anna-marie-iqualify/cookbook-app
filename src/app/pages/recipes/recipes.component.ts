@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { RecipesService } from '../../services/recipes.service';
 
 
 @Component({
@@ -16,11 +16,24 @@ import { Router } from '@angular/router';
       </div>
     </div>
   `,
-  styleUrls: ['./recipes.component.less']
+  styleUrls: ['./recipes.component.less'],
+  providers: [RecipesService]
 })
 
-export class RecipesComponent {
-  constructor(private router: Router){}
+export class RecipesComponent implements OnInit {
+  data: any;
+
+  constructor(
+    private router: Router,
+    private recipesService: RecipesService
+  ){}
+
+  ngOnInit() {
+    this.recipesService.getRecipes()
+    .subscribe((data) => {
+      console.log(data)
+    });
+  }
 
   addRecipe() {
     this.router.navigateByUrl('/recipe/new');
